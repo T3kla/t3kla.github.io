@@ -1,0 +1,150 @@
+@use 'colors'
+@use 'fonts'
+@use 'defaults'
+@use 'button'
+@use 'bubbles'
+
+body
+    height: 100%
+    width: 100%
+    background: linear-gradient(90deg, colors.$fg-primary 0%, colors.$fg-secondary 50%, colors.$fg-primary 100%)
+
+#header
+    height: 100vh
+    width: 100%
+    background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)
+
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+
+    #top
+        height: 80px
+        width: 97vw
+
+        z-index: 100
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: row
+
+        #left
+            height: 80px
+            width: 50%
+
+            display: flex
+            justify-content: start
+            align-items: center
+            flex-direction: row
+
+            #logo
+                height: 50px
+                width: 50px
+
+                transition-duration: 0.4s
+
+                &:hover
+                    transform: scale(1.3) rotate(720deg)
+
+            #title
+                margin: 0px 0px 0px 20px
+                font-size: 30px
+                color: #fff
+
+        #right
+            height: 80px
+            width: 50%
+
+            display: flex
+            justify-content: end
+            align-items: center
+            flex-direction: row
+    #bot
+        height: 100%
+
+        z-index: 100
+
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        flex-direction: column
+        align-content: center
+
+        #title
+            font-size: 60px
+            color: #fff
+
+            margin-top: 30vh
+
+            text-shadow: 0px 0px 10px colors.$fg-primary
+
+        #social-container
+            height: fit-content
+            width: fit-content
+
+            margin-bottom: 24vh
+
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+
+            #social-button
+                height: 40px
+                width: 40px
+
+                border-radius: 10px
+
+                margin: 0px 20px
+                padding: 10px 10px
+
+                #social-image
+                    height: 100%
+                    width: 100%
+
+                    border-radius: 0px
+
+                    margin: 0px 0px 0px 0px
+                    padding: 0px 0px 0px 0px
+
+        #arrow
+            width: 0
+            height: 0
+
+            transform: translateX(-50%)
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-top: 30px solid #fff
+
+            cursor: pointer
+
+            animation: bounce 2s infinite alternate ease-in-out
+
+            @keyframes bounce
+                0%
+                    transform: translateY(-10px) scale(1)
+                100%
+                    transform: translateY(15px) scale(1.2)
+
+#content
+    height: max-content
+    width: 60vw
+    background: rgba(0,0,0,0)
+
+    position: absolute
+    left: 20vw
+
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+
+#card
+    height: 350px
+    width: 100%
+    margin: 110px 50px 0px 50px
+    padding: 20px 20px
+    border-radius: defaults.$corners
+    background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)

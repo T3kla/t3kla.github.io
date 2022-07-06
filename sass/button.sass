@@ -1,0 +1,23 @@
+@use 'defaults'
+@use 'colors'
+
+.button
+    height: 50px
+    width: max-content
+    padding: 0px 20px
+    margin: 0px 20px 0px 0px
+
+    background-color: colors.$fg-secondary
+    border-radius: defaults.$corners
+    transition-duration: 0.1s
+    cursor: pointer
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+
+    &:hover
+        padding: 0px 20px
+        background-color: colors.$fg-primary
+        box-shadow: 0px 0px 5px 0px colors.$fg-primary

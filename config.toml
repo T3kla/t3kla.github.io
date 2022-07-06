@@ -1,0 +1,17 @@
+base_url = "https://t3kla.github.io"
+
+title = "Tekla"
+description = "A random place for random thoughts"
+author = "Manuel"
+default_language = "en"
+
+output_dir = "public"
+
+minify_html = false
+compile_sass = true
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]

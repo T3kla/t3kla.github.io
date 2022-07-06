@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tekla</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="top">
+        <div id="left">
+          <img id="logo" src="../images/tkl_logo.png" alt="" />
+          <h1 id="title">{{config.title}}</h1>
+        </div>
+        <div id="right">
+          <span class="button"><p>&#128640; About Me</p></span>
+          <span class="button"><p>&#128218; Blog</p></span>
+        </div>
+      </div>
+      <div id="bot">
+        <h1 id="title">&#128187; - Hi, I'm {{config.author}}.</h1>
+        <div id="social-container">
+          <span class="button" id="social-button"
+            ><a href="https://github.com/T3kla"
+              ><img id="social-image" src="../images/social/github-mark-white.png" alt="" /></a
+          ></span>
+          <span class="button" id="social-button"
+            ><a href="https://www.linkedin.com/in/manuelsegura94/"
+              ><img class="button" id="social-image" src="../images/social/linkedin-white.png" alt="" /></a
+          ></span>
+        </div>
+        <div id="arrow" onclick="scrollDown()"></div>
+      </div>
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+    <div id="content">{% for post in section.pages %} {{post.content | safe}} {% endfor %}</div>
+  </body>
+</html>
