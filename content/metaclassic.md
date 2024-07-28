@@ -1,6 +1,6 @@
 +++
 title = "Meta Classic Games"
-date = 2019-01-02
+date = 1900-12-30
 +++
 
 <html lang="en">

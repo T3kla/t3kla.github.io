@@ -1,6 +1,6 @@
 +++
 title = "Domenation"
-date = 2019-01-01
+date = 1900-12-31
 +++
 
 <html lang="en">
