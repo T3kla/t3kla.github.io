@@ -1,0 +1,76 @@
+@use 'colors'
+@use 'defaults'
+
+#card
+    height: 450px
+    width: 100%
+    
+    margin: 100px 50px 0px 50px
+    border-radius: defaults.$corners
+    
+    background: radial-gradient(50% 100% at 50% 100%, colors.$bg-secondary 0%, colors.$bg-primary 130%)
+    box-shadow: rgba(19, 19, 19, 0.3) 0rem 0.75rem 2.25rem 0rem
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: row
+
+    position: relative
+
+    #card-visual
+        height: 100%
+        width: 47%
+
+        position: relative
+        overflow: hidden
+        
+        #card-image-left
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            border-top-left-radius: defaults.$corners
+            border-bottom-left-radius: defaults.$corners
+            object-fit: cover
+
+        #card-image-right
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            border-top-right-radius: defaults.$corners
+            border-bottom-right-radius: defaults.$corners
+            object-fit: cover
+
+    #card-text
+        height: 100%
+        width: 53%
+
+        padding: 50px
+
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        flex-direction: column
+
+        #card-title
+            font-size: 60px
+            font-weight: 400
+            color: colors.$font-card-title
+
+        #card-subtitle
+            font-size: 20px
+            font-weight: 200
+            color: colors.$font-card-subtitle
+
+        #card-description
+            font-size: 20px
+            font-weight: 300
+            color: colors.$font-card-description
+
+        #card-engine
+            height: 50px
+            width: 50px

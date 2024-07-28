@@ -3,6 +3,7 @@
 @use 'defaults'
 @use 'button'
 @use 'bubbles'
+@use 'cards'
 
 body
     height: 100%
@@ -130,21 +131,13 @@ body
 
 #content
     height: max-content
-    width: 60vw
+    width: 70vw
     background: rgba(0,0,0,0)
 
     position: absolute
-    left: 20vw
+    left: 15vw
 
     display: flex
     justify-content: start
     align-items: center
     flex-direction: column
-
-#card
-    height: 350px
-    width: 100%
-    margin: 110px 50px 0px 50px
-    padding: 20px 20px
-    border-radius: defaults.$corners
-    background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)
