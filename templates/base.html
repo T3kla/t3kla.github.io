@@ -13,12 +13,11 @@
           <h1 id="title">{{config.title}}</h1>
         </div>
         <div id="right">
-          <span class="button"><p>&#128640; About Me</p></span>
           <span class="button"><p>&#128218; Blog</p></span>
         </div>
       </div>
       <div id="bot">
-        <h1 id="title">&#128187; - Hi, I'm {{config.author}}.</h1>
+        <h1 id="title">&#128187; - Hi, I'm {{config.extra.alias}}.</h1>
         <div id="social-container">
           <span class="button" id="social-button"
             ><a href="https://github.com/T3kla"
@@ -56,5 +55,8 @@
       </div>
     </div>
     <div id="content">{% for post in section.pages %} {{post.content | safe}} {% endfor %}</div>
+    <div id="footer">
+      <p id="footer-text">&#169; {{config.author}} - {{config.extra.year}}</p>
+    </div>
   </body>
 </html>

@@ -4,11 +4,6 @@ date = 1900-12-30
 +++
 
 <html lang="en">
-    <head>
-        <title>{{config.title}}</title>
-        <link rel="stylesheet" href="../style.css" />
-        <script src="../script.js"></script>
-    </head>
     <div id="card">
         <div id="card-text">
             <p id="card-title">Meta Classic Games</p>

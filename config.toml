@@ -2,7 +2,7 @@ base_url = "https://t3kla.github.io"
 
 title = "T3kla"
 description = "A random place for random thoughts"
-author = "Manuel"
+author = "Manuel Segura"
 default_language = "en"
 
 output_dir = "public"
@@ -15,3 +15,5 @@ build_search_index = false
 highlight_code = true
 
 [extra]
+alias = "Manuel"
+year = 2024

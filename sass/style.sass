@@ -10,6 +10,11 @@ body
     width: 100%
     background: linear-gradient(90deg, colors.$fg-primary 0%, colors.$fg-secondary 50%, colors.$fg-primary 100%)
 
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
 #header
     height: 100vh
     width: 100%
@@ -21,10 +26,12 @@ body
     flex-direction: column
 
     #top
-        height: 80px
-        width: 97vw
+        height: 100px
+        width: 98vw
 
         z-index: 100
+
+        translate: 10px 0px
 
         display: flex
         justify-content: space-between
@@ -134,10 +141,25 @@ body
     width: 70vw
     background: rgba(0,0,0,0)
 
-    position: absolute
-    left: 15vw
-
     display: flex
     justify-content: start
     align-items: center
     flex-direction: column
+
+#footer
+    height: 100px
+    width: 100%
+    background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)
+
+    margin-top: 70px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+
+    #footer-text
+        font-size: 20px
+        color: colors.$light
+
+        margin: 0px 0px 0px 0px
