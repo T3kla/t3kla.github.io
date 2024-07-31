@@ -12,7 +12,10 @@ date = 1900-12-29
             <p id="card-title">Maskerade</p>
             <p id="card-subtitle">Programmer</p>
             <p id="card-description">Maskerade is a deeply narrative Survival Horror game where you play as a young girl who has been kidnapped and forced to work as a ballerina in a terrific and mysterious cabaret.<br><br>Explore and find a way to escape from the clutches of the evil Madame who runs it.</p>
-            <img src="../images/unreal_logo.png" alt="Card Engine Logo" id="card-engine">
+            <div id="card-logo-container">
+                <img src="../images/pc_logo.png" alt="Card Engine Logo" id="card-logo">
+                <img src="../images/unreal_logo.png" alt="Card Engine Logo" id="card-logo">
+            </div>
         </div>
     </div>
 </html>
