@@ -15,6 +15,10 @@ body
     align-items: center
     flex-direction: column
 
+a
+    text-decoration: none
+    color: colors.$font-dark
+
 #header
     height: 100vh
     width: 100%
@@ -136,6 +140,44 @@ body
                 100%
                     transform: translateY(15px) scale(1.2)
 
+#about
+    height: max-content
+    width: 100%
+    background: rgba(0,0,0,0)
+    margin-top: 70px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+
+    #about-left
+        height: max-content
+
+        #about-image
+            height: 200px
+            width: 200px
+
+            opacity: 70%
+            border-radius: defaults.$corners
+
+            padding: 10px
+
+    #about-right
+        height: max-content
+
+        #about-title
+            font-size: 40px
+            color: colors.$font-dark
+
+            margin: 0px 0px 0px 0px
+
+        #about-text
+            font-size: 20px
+            color: colors.$font-dark
+
+            margin: 20px 0px 0px 0px
+
 #content
     height: max-content
     width: 70vw
@@ -147,19 +189,29 @@ body
     flex-direction: column
 
 #footer
-    height: 100px
+    height: 170px
     width: 100%
     background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)
 
     margin-top: 70px
 
+    text-justify: center
+
     display: flex
     justify-content: center
     align-items: center
-    flex-direction: row
+    flex-direction: column
 
     #footer-text
         font-size: 20px
-        color: colors.$light
+        color: colors.$font-dark
+
+        margin: 0px 0px 0px 0px
+    
+    #footer-email
+        font-size: 20px
+        font-weight: 200
+        text-decoration-line: underline
+        color: colors.$font-dark
 
         margin: 0px 0px 0px 0px

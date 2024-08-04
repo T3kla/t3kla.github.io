@@ -13,6 +13,7 @@
           <h1 id="title">{{config.title}}</h1>
         </div>
         <div id="right">
+          <span class="button" onclick="scrollToBottom()"><p>&#128231; Contact</p></span>
           <span class="button"><p>&#128218; Blog</p></span>
         </div>
       </div>
@@ -28,7 +29,7 @@
               ><img class="button" id="social-image" src="../images/social/linkedin-white.png" alt="" /></a
           ></span>
         </div>
-        <div id="arrow" onclick="scrollDown()"></div>
+        <div id="arrow" onclick="scrollToContent()"></div>
       </div>
       <div class="bubbles">
         <div class="bubble"></div>
@@ -56,6 +57,11 @@
     </div>
     <div id="content">{% for post in section.pages %} {{post.content | safe}} {% endfor %}</div>
     <div id="footer">
+      <p id="footer-text">
+        Contact - <a id="footer-email" href="mailto:segura.manu.jesus@gmail.com">segura.manu.jesus@gmail.com</a>
+      </p>
+      <br />
+      <br />
       <p id="footer-text">&#169; {{config.author}} - {{config.extra.year}}</p>
     </div>
   </body>
