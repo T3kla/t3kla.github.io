@@ -13,8 +13,8 @@
           <h1 id="title">{{config.title}}</h1>
         </div>
         <div id="right">
-          <span class="button" onclick="scrollToBottom()"><p>&#128231; Contact</p></span>
-          <span class="button"><p>&#128218; Blog</p></span>
+          <span class="button" onclick="scrollToBottom()"><p class="button-text">&#128231; Contact</p></span>
+          <span class="button"><p class="button-text">&#128218; Blog</p></span>
         </div>
       </div>
       <div id="bot">
@@ -55,14 +55,84 @@
         <div class="bubble"></div>
       </div>
     </div>
-    <div id="content">{% for post in section.pages %} {{post.content | safe}} {% endfor %}</div>
-    <div id="footer">
-      <p id="footer-text">
-        Contact - <a id="footer-email" href="mailto:segura.manu.jesus@gmail.com">segura.manu.jesus@gmail.com</a>
+    <div class="separator">
+      <h1 class="separator-text">About me</h1>
+      <div class="separator-image"></div>
+    </div>
+    <div class="about">
+      <div class="about-about">
+        <img class="about-image" src="../images/me.jpeg" alt="" />
+        <p class="about-text">
+          Hello! My name is Manuel Segura, and I'm a game developer and programmer with extensive experience. Over the
+          years, I have acquired a deep understanding of game engines, which I use to turn my creative vision into
+          tangible games.<br /><br />
+          In addition, I'm also a teacher. I love sharing my knowledge and experience with others, helping aspiring
+          developers learn the skills they need to succeed in the industry.
+        </p>
+      </div>
+      <div class="about-techstack">
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/unity_logo.png" alt="" />
+          <p class="about-techstack-text">Unity</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/unreal_logo.png" alt="" />
+          <p class="about-techstack-text">UE5</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/godot_logo.png" alt="" />
+          <p class="about-techstack-text">Godot</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/cpp_logo.png" alt="" />
+          <p class="about-techstack-text">C++</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/cs_logo.png" alt="" />
+          <p class="about-techstack-text">C#</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/rust_logo.png" alt="" />
+          <p class="about-techstack-text">Rust</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/zig_logo.png" alt="" />
+          <p class="about-techstack-text">Zig</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/git_logo.png" alt="" />
+          <p class="about-techstack-text">Git</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/html_logo.png" alt="" />
+          <p class="about-techstack-text">HTML</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/css_logo.png" alt="" />
+          <p class="about-techstack-text">CSS</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/playfab_logo.png" alt="" />
+          <p class="about-techstack-text">Playfab</p>
+        </div>
+        <div class="about-techstack-pill">
+          <img class="about-techstack-image" src="../images/tech/aws_logo.png" alt="" />
+          <p class="about-techstack-text">AWS</p>
+        </div>
+      </div>
+    </div>
+    <div class="separator">
+      <h1 class="separator-text">Portfolio</h1>
+      <div class="separator-image"></div>
+    </div>
+    <div class="content">{% for post in section.pages %} {{post.content | safe}} {% endfor %}</div>
+    <div class="footer">
+      <p class="footer-text">
+        Contact - <a class="footer-email" href="mailto:segura.manu.jesus@gmail.com">segura.manu.jesus@gmail.com</a>
       </p>
       <br />
       <br />
-      <p id="footer-text">&#169; {{config.author}} - {{config.extra.year}}</p>
+      <p class="footer-text">&#169; {{config.author}} - {{config.extra.year}}</p>
     </div>
   </body>
 </html>
