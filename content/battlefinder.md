@@ -1,12 +1,12 @@
 +++
-title = "BattleFinder"
+title = "Battlefinder"
 date = 1900-12-28
 +++
 
 <html lang="en">
     <div class="card">
         <div class="card-text">
-            <p class="card-title">BattleFinder</p>
+            <p class="card-title">Battlefinder</p>
             <p class="card-subtitle">Programmer</p>
             <p class="card-description">Battlefinder is a TTSRPG (Table-Top Simulator Role Playing Game) game oriented to make possible to play Pathfinder 2e digitally.<br><br>While unfinished, the game a character editor up to level 20 and a dungeon generator tool which made sharing the campaign's maps really easy.</p>
             <div class="card-logo-container">
