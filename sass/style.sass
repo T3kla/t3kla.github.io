@@ -4,11 +4,13 @@
 @use 'button'
 @use 'bubbles'
 @use 'cards'
+// @use 'blog'
+// @use 'blog_page'
 
 body
     height: 100%
     width: 100%
-    background: linear-gradient(90deg, colors.$fg-primary 0%, colors.$fg-secondary 50%, colors.$fg-primary 100%)
+    background: linear-gradient(90deg, colors.$cont-primary 0%, colors.$cont-secondary 50%, colors.$cont-terciary 100%)
 
     display: flex
     justify-content: center
@@ -159,12 +161,14 @@ a
         margin: 0px 0px 0px 0px
 
     .separator-image
-        height: 1px
-        width: 100%
+        height: 7px
+        width: 90%
 
-        margin-top: 10px
+        margin: 10px 0px 0px 0px
 
-        background: colors.$font-dark
+        background: linear-gradient(90deg, #0000 0%, colors.$fg-accent 50%, #0000 100%)
+
+        border-radius: 100px
 
 .about
     height: max-content
@@ -221,7 +225,6 @@ a
             height: 60px
             width: max-content
 
-            // border: 4px solid #3a3647
             box-shadow: rgba(19, 19, 19, 0.5) 0rem 0.25rem 1rem 0rem
             border-radius: 100px
 

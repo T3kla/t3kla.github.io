@@ -39,7 +39,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(colors.$fg-secondary, 1);
+    background: rgba(colors.$fg-accent, 1);
     border-radius: inherit;
     animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate
       infinite;
