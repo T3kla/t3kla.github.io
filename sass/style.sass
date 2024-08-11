@@ -4,13 +4,13 @@
 @use 'button'
 @use 'bubbles'
 @use 'cards'
-// @use 'blog'
-// @use 'blog_page'
+@use 'blog'
 
 body
     height: 100%
     width: 100%
-    background: linear-gradient(90deg, colors.$cont-primary 0%, colors.$cont-secondary 50%, colors.$cont-terciary 100%)
+    background: #f06
+    background: linear-gradient(45deg, colors.$cont-primary, colors.$cont-secondary),linear-gradient(142deg, transparent, white),linear-gradient(108deg, red, transparent)
 
     display: flex
     justify-content: center
@@ -21,7 +21,7 @@ a
     text-decoration: none
     color: colors.$font-dark
 
-#header
+header
     height: 100vh
     width: 100%
     background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)

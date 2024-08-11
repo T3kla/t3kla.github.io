@@ -1,0 +1,100 @@
+@use 'colors'
+@use 'defaults'
+
+.blog
+    height: max-content
+    width: 90%
+    
+    margin-top: 5vh
+
+    border-radius: defaults.$corners
+    
+    background: radial-gradient(50% 100% at 50% 100%, colors.$bg-secondary 0%, colors.$bg-primary 130%)
+    box-shadow: rgba(19, 19, 19, 0.3) 0rem 0.75rem 2.25rem 0rem
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+
+    .blog-entry
+        height: fit-contentt
+        width: 100%
+
+        padding: 15px 0px
+        margin: 15px 0px
+
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+
+        .blog-entry-date
+            width: 200px
+            min-width: 170px
+            height: 100%
+
+            font-size: 1.5rem
+            font-weight: 700
+            font-style: italic
+            font-family: 'Nunito'
+            color: #58526b
+
+            text-align: right
+            align-content: center
+
+        .blog-entry-separator
+            width: 4px
+            height: 100px
+            
+            margin: 0px 3vw
+
+            border-radius: 5px
+            background: #25222c
+
+        .blog-entry-main
+            height: 100%
+            flex-grow: 1
+
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            flex-direction: column
+
+            .blog-entry-title
+                font-size: 2rem
+                font-weight: 400
+                font-family: 'Fira Mono'
+                color: colors.$font-dark
+
+                margin-bottom: 10px
+
+                text-align: center
+
+            .blog-entry-tags
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: row
+
+                .blog-entry-tag
+                    margin-right: 5px
+
+                    padding: 5px 10px
+
+                    border-radius: 1000px
+
+                    background: colors.$bg-primary
+                    color: colors.$fg-primary
+
+                    font-size: 0.8rem
+                    font-weight: 700
+                    font-family: 'Nunito'
+
+        .blog-entry-extra
+            width: 20%
+
+            .blog-entry-words
+
+            .blog-entry-time
+
