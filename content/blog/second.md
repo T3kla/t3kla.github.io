@@ -1,6 +1,5 @@
 +++
 title = "My second post"
-template = "blog_page.html"
 date = 2019-11-28
 word_count = 10
 reading_time = 69

@@ -12,9 +12,10 @@
         {% endfor %}
       </div>
     </div>
+    <div class="blog-entry-separator"></div>
     <div class="blog-entry-extra">
-      <p class="blog-entry-words"><b>Word count:</b> {{ page.word_count }}</p>
-      <p class="blog-entry-time"><b>Read time:</b> {{ page.reading_time }}</p>
+      <p class="blog-entry-words">{{ page.word_count }} words</p>
+      <p class="blog-entry-time">{{ page.reading_time }} minutes</p>
     </div>
   </div>
   {% endfor %}
