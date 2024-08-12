@@ -2,7 +2,7 @@
 <div class="blog">
   {% for page in section.pages %}
   <div class="blog-entry">
-    <p class="blog-entry-date">{{ page.year }}-{{ page.month }}-{{ page.day }}</p>
+    <p class="blog-entry-date">{{ page.date }}</p>
     <div class="blog-entry-separator"></div>
     <div class="blog-entry-main">
       <a class="blog-entry-title" href="{{ page.permalink | safe }}">{{ page.title }}</a>
