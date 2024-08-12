@@ -8,7 +8,7 @@ date = 1900-12-28
         <div class="card-text">
             <p class="card-title">Battlefinder</p>
             <p class="card-subtitle">Programmer</p>
-            <p class="card-description">Battlefinder is a TTSRPG (Table-Top Simulator Role Playing Game) game oriented to make possible to play Pathfinder 2e digitally.<br><br>While unfinished, the game a character editor up to level 20 and a dungeon generator tool which made sharing the campaign's maps really easy.</p>
+            <p class="card-description">Battlefinder is a TTSRPG (Table-Top Simulator Role Playing Game) game aimed at making it possible to play Pathfinder 2e digitally.<br><br>While unfinished, the game has a character editor up to level 20 and a dungeon generator tool which made sharing the campaign's maps really easy.</p>
             <div class="card-logo-container">
                 <img src="../images/pc_logo.png" alt="Card Engine Logo" class="card-logo">
                 <img src="../images/tech/unity_logo.png" alt="Card Engine Logo" class="card-logo">
