@@ -19,7 +19,7 @@
     flex-direction: column
 
     .blog-entry
-        height: fit-contentt
+        height: fit-content
         width: 100%
 
         margin-top: 30px
@@ -30,7 +30,7 @@
         flex-direction: row
 
         .blog-entry-date
-            width: 160px
+            min-width: 140px
             height: 100%
 
             font-size: 1.2rem
@@ -46,14 +46,16 @@
             width: 4px
             height: 100px
             
-            margin: 0px 3vw
+            margin: 0px 30px
 
             border-radius: 5px
             background: colors.$bg-secondary
 
         .blog-entry-main
-            height: 100%
-            flex-grow: 1
+            height: fit-content
+            width: 85%
+
+            overflow: hidden
 
             display: flex
             justify-content: center
@@ -61,14 +63,18 @@
             flex-direction: column
 
             .blog-entry-title
+                width: 100%
+                height: 100%
+
                 font-size: 2rem
                 font-weight: 400
                 font-family: 'Fira Mono'
                 color: colors.$font-dark
+                overflow: hidden
 
                 margin-bottom: 4px
 
-                text-align: center
+                text-align: left
 
             .blog-entry-tags
                 width: 100%
@@ -85,15 +91,15 @@
 
                     border-radius: 1000px
 
-                    background: colors.$bg-primary
+                    background: colors.$bg-secondary
                     color: colors.$fg-primary
 
-                    font-size: 0.8rem
+                    font-size: 1rem
                     font-weight: 700
                     font-family: 'Nunito'
 
         .blog-entry-extra
-            width: 160px
+            min-width: 140px
             height: 100%
 
             display: flex

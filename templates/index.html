@@ -1,8 +1,10 @@
 {% extends "base.html" %} {% block content %}
 <header>
-  <div id="top">
-    <div id="left">
-      <a href="{{ get_url(path='@/_index.md') }}"> <img id="logo" src="../images/tkl_logo.png" alt="" /></a>
+  <div class="header-top">
+    <div class="header-top-left">
+      <a href="{{ get_url(path='@/_index.md') }}">
+        <img class="header-top-left-logo" src="../images/tkl_logo.png" alt=""
+      /></a>
       <!-- <h1 id="title">{{config.title}}</h1> -->
     </div>
     <div id="right">
@@ -13,7 +15,7 @@
     </div>
   </div>
   <div id="bot">
-    <h1 id="title">&#128187; - Hi, I'm {{config.extra.alias}}.</h1>
+    <h1 id="title">&#128187; - Hi, I am {{config.extra.alias}}.</h1>
     <div id="social-container">
       <span class="button" id="social-button"
         ><a href="https://github.com/T3kla" target="_blank"
