@@ -2,15 +2,15 @@
 @use 'defaults'
 
 .blog
-    height: 90vh
-    width: 90%
-    
-    margin: 5vh 0vh
-    padding-bot: 30px
+    height: fit-content
+    min-height: 88.6vh
+    width: 94vw
+
+    margin: 3vw 3vh
 
     border-radius: defaults.$corners
     
-    background: radial-gradient(50% 100% at 50% 100%, colors.$bg-secondary 0%, colors.$bg-primary 130%)
+    background: colors.$bg-primary
     box-shadow: rgba(19, 19, 19, 0.3) 0rem 0.75rem 2.25rem 0rem
 
     display: flex
@@ -30,11 +30,10 @@
         flex-direction: row
 
         .blog-entry-date
-            width: 200px
-            min-width: 170px
+            width: 160px
             height: 100%
 
-            font-size: 1.5rem
+            font-size: 1.2rem
             font-weight: 300
             font-style: italic
             font-family: 'Nunito'
@@ -62,12 +61,12 @@
             flex-direction: column
 
             .blog-entry-title
-                font-size: 2.5rem
+                font-size: 2rem
                 font-weight: 400
                 font-family: 'Fira Mono'
                 color: colors.$font-dark
 
-                margin-bottom: 8px
+                margin-bottom: 4px
 
                 text-align: center
 
@@ -94,7 +93,7 @@
                     font-family: 'Nunito'
 
         .blog-entry-extra
-            width: 130px
+            width: 160px
             height: 100%
 
             display: flex
@@ -103,7 +102,7 @@
             flex-direction: column
 
             .blog-entry-words
-                font-size: 1.2rem
+                font-size: 1.1rem
                 font-weight: 200
                 font-family: 'Nunito'
                 color: colors.$fg-primary
@@ -111,10 +110,34 @@
                 text-align: right
 
             .blog-entry-time
-                font-size: 1.2rem
+                font-size: 1.1rem
                 font-weight: 200
                 font-family: 'Nunito'
                 color: colors.$fg-primary
 
                 text-align: right
 
+    .blog-content
+        width: 90%
+        max-width: 1200px
+        height: fit-content
+
+        font-size: 1.3rem
+        font-weight: 200
+        font-family: 'Nunito'
+        text-align: justify
+        color: colors.$font-darker
+
+        justify-content: center
+        align-items: flex-start
+
+        padding: 30px 15px 0px 15px
+
+        p
+            font-family: 'Nunito'
+            font-size: 24px
+            font-weight: 200
+            text-align: justify
+            color: colors.$font-darker
+
+            margin: 0px 0px 20px 0px
