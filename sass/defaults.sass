@@ -1,4 +1,4 @@
-// Defaults
+@use 'colors'
 
 $spacing: 1rem
 $spacing-half: $spacing / 2
@@ -6,11 +6,43 @@ $spacing-double: $spacing * 2
 
 $corners: 2rem
 
+$default-spacing: 70px
+$default-content-width: 1700px
+
 // Pading and Margin
 
 body
+    height: fit-content
+    min-height: 100%
+    width: 100%
+    background: colors.$cont-secondary
+
     padding: 0px 0px
     margin: 0px 0px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+header
+    height: 100vh
+    width: 100%
+    background: colors.$bg-primary
+
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+
+a
+    text-decoration: none
+    color: colors.$font-dark
+    font-style: normal
+
+b
+    text-decoration: none
+    color: colors.$fg-primary
 
 h1
     padding: 0px 0px
@@ -56,10 +88,14 @@ h6
 
 p
     padding: 0px 0px
-    margin: 0px 0px
+    margin: 0px 0px 15px 0px
 
-    font-family: 'Fira Mono'
-    font-weight: 600
+    font-family: 'Nunito'
+    font-size: 24px
+    font-weight: 200
+
+    text-align: justify
+    color: colors.$font-darker
 
 a
     padding: 0px 0px

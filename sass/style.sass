@@ -6,158 +6,128 @@
 @use 'cards'
 @use 'blog'
 
-body
-    height: 100%
-    width: 100%
-    background: #f06
-    background: linear-gradient(45deg, colors.$cont-primary, colors.$cont-secondary),linear-gradient(142deg, transparent, white),linear-gradient(108deg, red, transparent)
+.header-top
+    height: 100px
+    width: 98vw
+
+    z-index: 100
+
+    position: absolute
+    top: 0px
+    left: 5px
+
+    translate: 10px 0px
 
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    flex-direction: column
+    flex-direction: row
 
-a
-    text-decoration: none
-    color: colors.$font-dark
-    font-style: normal
-
-b
-    text-decoration: none
-    color: colors.$fg-primary
-
-header
-    height: 100vh
-    width: 100%
-    background: linear-gradient(345deg, colors.$bg-secondary 0%, colors.$bg-primary 70%)
-
-    display: flex
-    justify-content: start
-    align-items: center
-    flex-direction: column
-
-    .header-top
-        height: 100px
-        width: 98vw
-
-        z-index: 100
-
-        position: absolute
-        top: 0px
-        left: 5px
-
-        translate: 10px 0px
+    .header-top-left
+        height: 80px
+        width: 50%
 
         display: flex
-        justify-content: space-between
+        justify-content: start
         align-items: center
         flex-direction: row
 
-        .header-top-left
-            height: 80px
-            width: 50%
+        .header-top-left-logo
+            height: 50px
+            width: 50px
 
-            display: flex
-            justify-content: start
-            align-items: center
-            flex-direction: row
+            transition-duration: 0.4s
 
-            .header-top-left-logo
-                height: 50px
-                width: 50px
+            &:hover
+                transform: scale(1.3) rotate(720deg)
 
-                transition-duration: 0.4s
-
-                &:hover
-                    transform: scale(1.3) rotate(720deg)
-
-            #title
-                margin: 0px 0px 0px 20px
-                font-size: 30px
-                color: colors.$light
-
-        #right
-            height: 80px
-            width: 50%
-
-            display: flex
-            justify-content: end
-            align-items: center
-            flex-direction: row
-    #bot
-        height: 100%
-
-        margin-top: 100px
-
-        z-index: 100
-
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        flex-direction: column
-        align-content: center
-
-        #title
-            font-size: 60px
+        .header-top-left-title
+            margin: 0px 0px 0px 20px
+            font-size: 30px
             color: colors.$light
 
-            margin-top: 30vh
+    .header-top-right
+        height: 80px
+        width: 50%
 
-            text-shadow: 0px 0px 10px colors.$fg-primary
+        display: flex
+        justify-content: end
+        align-items: center
+        flex-direction: row
+.header-bot
+    height: 100%
 
-        #social-container
-            height: fit-content
-            width: fit-content
+    margin-top: 100px
 
-            margin-bottom: 24vh
+    z-index: 100
 
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: row
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-direction: column
+    align-content: center
 
-            #social-button
-                height: 40px
-                width: 40px
+    .header-bot-title
+        font-size: 60px
+        color: colors.$light
 
-                border-radius: 10px
+        margin-top: 30vh
 
-                margin: 0px 20px
-                padding: 10px 10px
+        text-shadow: 0px 0px 4px colors.$fg-primary
 
-                #social-image
-                    height: 100%
-                    width: 100%
+    .header-bot-social-container
+        height: fit-content
+        width: fit-content
 
-                    border-radius: 0px
+        margin-bottom: 24vh
 
-                    margin: 0px 0px 0px 0px
-                    padding: 0px 0px 0px 0px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
 
-        #arrow
-            width: 0
-            height: 0
+        .header-bot-social-button
+            height: 40px
+            width: 40px
 
-            transform: translateX(-50%)
-            border-left: 20px solid transparent
-            border-right: 20px solid transparent
-            border-top: 30px solid colors.$light
+            border-radius: 10px
 
-            cursor: pointer
+            margin: 0px 20px
+            padding: 10px 10px
 
-            animation: bounce 2s infinite alternate ease-in-out
+            .header-bot-social-button-image
+                height: 100%
+                width: 100%
 
-            @keyframes bounce
-                0%
-                    transform: translateY(-10px) scale(1)
-                100%
-                    transform: translateY(15px) scale(1.2)
+                border-radius: 0px
+
+                margin: 0px 0px 0px 0px
+                padding: 0px 0px 0px 0px
+
+    .header-bot-arrow
+        width: 0
+        height: 0
+
+        transform: translateX(-50%)
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-top: 30px solid colors.$light
+
+        cursor: pointer
+
+        animation: bounce 2s infinite alternate ease-in-out
+
+        @keyframes bounce
+            0%
+                transform: translateY(-10px) scale(1)
+            100%
+                transform: translateY(15px) scale(1.2)
 
 .separator
     height: fit-content
     width: 100%
 
-    margin-top: 80px
+    margin-top: defaults.$default-spacing + 10px
 
     display: flex
     justify-content: flex-end
@@ -183,7 +153,9 @@ header
 
 .about
     height: max-content
-    width: 70%
+    width: 100vw
+    max-width: defaults.$default-content-width
+
     margin-top: 70px
 
     background: colors.$bg-primary
@@ -263,16 +235,6 @@ header
                 margin-left: 8px 
 
                 opacity: 85%
-
-.content
-    height: max-content
-    width: 70%
-    background: rgba(0,0,0,0)
-
-    display: flex
-    justify-content: start
-    align-items: center
-    flex-direction: column
 
 .footer
     height: 170px

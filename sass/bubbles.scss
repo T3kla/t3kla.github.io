@@ -48,7 +48,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
   @for $i from 0 through $bubble-count {
     &:nth-child(#{$i}) {
       --bubble-left-offset: #{random_range(0vw, 100vw)};
-      --bubble-radius: #{random_range(1vw, 20vw)};
+      --bubble-radius: #{random_range(1vw, 15vw)};
       --bubble-float-duration: #{random_range(8s, 16s)};
       --bubble-sway-duration: #{random_range(8s, 16s)};
       --bubble-float-delay: #{random_range(0s, 6s)};

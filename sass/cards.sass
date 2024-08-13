@@ -1,11 +1,23 @@
 @use 'colors'
 @use 'defaults'
 
+.content
+    height: max-content
+    width: 100vw
+    max-width: defaults.$default-content-width
+
+    background: rgba(0,0,0,0)
+
+    display: flex
+    justify-content: start
+    align-items: center
+    flex-direction: column
+
 .card
-    height: 450px
+    height: 500px
     width: 100%
     
-    margin-top: 70px
+    margin-top: defaults.$default-spacing
     border-radius: defaults.$corners
     
     background: colors.$bg-primary
@@ -53,7 +65,7 @@
 
     .card-text
         height: 100%
-        width: 32vw
+        width: 36vw
 
         padding: 0px 50px
 
@@ -61,7 +73,6 @@
         justify-content: start
         align-items: center
         flex-direction: column
-        transition: all 0.3s ease
 
         .card-title
             height: 100px
@@ -79,12 +90,7 @@
             color: colors.$fg-primary
 
         .card-description
-            font-size: 22px
-            font-weight: 300
-            font-family: 'Nunito'
             flex-grow: 1
-            align-content: center
-            color: colors.$font-darker
 
         .card-logo-container
             height: 50px
