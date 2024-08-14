@@ -31,9 +31,6 @@
     position: relative
     transition: width 0.3s ease
 
-    &:hover
-        width: 110%
-
     .card-visual
         height: 100%
         flex-grow: 1
@@ -76,20 +73,32 @@
 
         .card-title
             height: 100px
+            overflow: hidden
+
+            margin-bottom: 0px
+
             font-size: 65px
             font-family: 'Nunito'
             font-weight: 500
+
             align-content: end
             color: colors.$font-dark
 
         .card-subtitle
-            height: 50px
+            height: 40px
+            overflow: hidden
+
+            margin-bottom: 0px
+
             font-size: 20px
-            font-weight: 200
+            font-weight: 500
+            font-family: 'Fira Mono'
+
             align-content: start
             color: colors.$fg-primary
 
         .card-description
+            overflow: hidden
             flex-grow: 1
 
         .card-logo-container

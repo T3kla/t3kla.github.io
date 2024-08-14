@@ -6,9 +6,12 @@ date = 1900-12-26
 <html lang="en">
     <div class="card">
         <div class="card-text">
-            <p class="card-title">BeatShips</p>
+            <p class="card-title">Beatships</p>
             <p class="card-subtitle">Programmer</p>
-            <p class="card-description">Flow with the music while defeating enemies. You can use your favourite music to create and share levels with the community and also download new ones to extend your gameplay.<br><br>Complete levels and unlock new ships and skins to get new game styles and cool looks.</p>
+            <div class="card-description">
+                <p>Beatships is a community oriented, rhythm based, arcade shoot'em up that allows for the creation and sharing of levels, similar to Osu.</p>
+                <p>This game revolves around <b>User Generated Content</b> in the form of the creation of levels and/or the music they are built into. It contains a <b>feature rich Level Editor</b>, which in tandem with the modular nature of the software and art that compose the game, allows the player to create unique experiences.</p>
+            </div>
             <div class="card-logo-container">
                 <img src="../images/pc_logo.png" alt="Card Engine Logo" class="card-logo">
                 <img src="../images/tech/unity_logo.png" alt="Card Engine Logo" class="card-logo">

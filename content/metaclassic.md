@@ -8,7 +8,10 @@ date = 1900-12-30
         <div class="card-text">
             <p class="card-title">Meta Classic Games</p>
             <p class="card-subtitle">Senior Programmer</p>
-            <p class="card-description">Meta Classic Games is a revolutionary hub for timeless classic games, enhanced with the power of NFTs.<br><br>Dive into a world where strategy meets digital ownership, allowing players to collect, trade, and showcase unique game pieces and achievements.</p>
+            <div class="card-description">
+                <p>Meta Classic Games is a revolutionary hub for timeless classic games, enhanced with the power of NFTs.</p>
+                <p>Working on this project, I had the opportunity to master Unity's Mirror Networking package, enabling me to create a seamless, <b>cross-platform experience for players across desktop PCs, mobile devices, and web browsers</b>. This experience enhanced my understanding multiplayer networking and the intricacies of synchronizing gameplay across different platforms.</p>
+            </div>
             <div class="card-logo-container">
                 <img src="../images/pc_logo.png" alt="Card Engine Logo" class="card-logo">
                 <img src="../images/tech/unity_logo.png" alt="Card Engine Logo" class="card-logo">
