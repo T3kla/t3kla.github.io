@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>{{config.title}}</title>
     <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) | safe }}" />
-    <script src="{{ get_url(path="script.css") | safe }}></script>
+    <script src="{{ get_url(path="script.js", cachebust=true) | safe }}"></script>
   </head>
   <body>
     {% block content %} {% endblock %}
