@@ -6,7 +6,7 @@ date = 2024-08-21
 tags = ["Rant"]
 +++
 
-This post is being actively being worked on!
+This post is actively being worked on!
 
 <!-- Why is that being promoted as a programmer forces you to program less and less?
 
