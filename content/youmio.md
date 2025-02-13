@@ -9,8 +9,8 @@ date = 1901-01-01
             <p class="card-title">Youmio Worlds</p>
             <p class="card-subtitle">(Current) Senior Programmer</p>
             <div class="card-description">
-                <p>Youmio Worlds uses the latests advancements on AI to create <b>the first truly endless game</b> ever created.</p>
-                <p>This project has deeply unique approach to content generation, starting from the creation of <b>procedural worlds</b> constructed from unique seeds (NFTs), all the way into gathering the power of the <b>latest generative AI models to create human-like characters</b>.</p>
+                <p>Youmio Worlds uses cutting-edge AI technology to create <b>the first truly endless game</b> ever seen.</p>
+                <p>This project is based on a groundbreaking approach to content generation, starting from the creation of <b>procedural worlds from unique NFT-based seeds</b>, all the way into gathering the power of the <b>latest generative AI models to create human-like characters</b>.</p>
             </div>
             <div class="card-logo-container">
                 <img src="../images/pc_logo.png" alt="Card Engine Logo" class="card-logo">
