@@ -16,12 +16,13 @@
 .card
     height: 500px
     width: 100%
-    
+
     margin-top: defaults.$default-spacing
     border-radius: defaults.$corners
-    
+
     background: colors.$bg-primary
-    box-shadow: rgba(19, 19, 19, 0.3) 0rem 0.75rem 2.25rem 0rem
+    // box-shadow: rgba(19, 19, 19, 0.3) 0rem 0.75rem 2.25rem 0rem
+    border: 2px solid colors.$bg-secondary
 
     display: flex
     justify-content: space-between
@@ -39,7 +40,7 @@
 
         position: relative
         overflow: hidden
-        
+
         .card-image-left
             position: absolute
             top: 0
@@ -110,7 +111,7 @@
             justify-content: center
             align-items: center
             flex-direction: row
-        
+
             .card-logo
                 height: 50px
                 width: 50px
