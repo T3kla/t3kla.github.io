@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="portfolio-container">
+    <div class="portfolio-layout">
+
+        <div class="timeline-column">
+            <div class="timeline-line"></div>
+            {% for page in section.pages %}
+            <div class="timeline-dot-container">
+                <div class="timeline-date-range">
+                    <span>{{ page.extra.end_date }}</span>
+                    <span>{{ page.extra.start_date }}</span>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <main class="cards-column">
+            {% for page in section.pages %}
+            <article class="isle-card project-card">
+                <div class="card-header">
+                    <div class="title-area">
+                        <h2 class="card-title">{{ page.title }}</h2>
+                        {% if page.extra.subtitle %}
+                        <p class="card-subtitle">{{ page.extra.subtitle }}</p>
+                        {% endif %}
+                    </div>
+
+                    {% if page.extra.logos %}
+                    <div class="card-logo-container">
+                        {% for logo in page.extra.logos %}
+                        <img src="{{ get_url(path=logo) }}" alt="Tech Logo" class="card-logo">
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="card-description">
+                    {{ page.content | safe }}
+                </div>
+
+                {% if page.extra.images %}
+                <div class="card-visual">
+                    {% for img in page.extra.images %}
+                    <div class="image-wrapper">
+                        <img src="{{ get_url(path=img) }}" alt="{{ page.title }} screenshot" class="card-image-bottom">
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+
+            <nav class="isle-nav">
+                <a href="{{ get_url(path='') }}" class="nav-item">Back</a>
+            </nav>
+        </main>
+
+    </div>
+</div>
+{% endblock content %}
