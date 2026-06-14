@@ -1,17 +1,17 @@
 +++
 title = "Battlefinder"
-date = 2021-03-01
+date = 2021-08-01
 
 [extra]
 start_date = "Feb.2020"
 end_date = "Oct.2021"
 subtitle = "Programmer"
 logos = [
-    "images/pc_logo.png",
     "images/tech/unity_logo.png"
 ]
 images = [
-    "images/battlefinder/battlefinder_1.png"
+    "images/battlefinder/battlefinder_tavern.png",
+    "images/battlefinder/battlefinder_walls.png",
 ]
 +++
 

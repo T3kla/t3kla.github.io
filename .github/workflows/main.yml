@@ -4,7 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    # Add these lines:
     permissions:
       contents: write
     steps:
@@ -14,5 +13,5 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
           PAGES_BRANCH: gh-pages
-          TOKEN: ${{ secrets.GITHUB_TOKEN }} # Note: Changed from TOKEN to GITHUB_TOKEN
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           

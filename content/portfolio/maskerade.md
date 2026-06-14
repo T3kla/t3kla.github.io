@@ -3,15 +3,15 @@ title = "Maskerade"
 date = 2022-10-01
 
 [extra]
-start_date = "Oct.2021"
+start_date = "Nov.2021"
 end_date = "Oct.2022"
 subtitle = "Programmer"
 logos = [
-    "images/pc_logo.png",
-    "images/tech/unreal_logo.png"
+    "images/tech/unity_logo.png"
 ]
 images = [
-    "../images/maskerade/maskerade_library_1.png"
+    "../images/maskerade/maskerade_columns.png",
+    "../images/maskerade/maskerade_library_0.png",
 ]
 +++
 

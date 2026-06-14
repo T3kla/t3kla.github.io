@@ -7,11 +7,11 @@ start_date = "Sep.2017"
 end_date = "Sep.2019"
 subtitle = "Junior Programmer"
 logos = [
-    "images/pc_logo.png",
     "images/tech/unity_logo.png"
 ]
 images = [
-    "../images/beatships/animated.gif"
+    "../images/beatships/beat_0.png",
+    "../images/beatships/beat_editor_1.png",
 ]
 +++
 
