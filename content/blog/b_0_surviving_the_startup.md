@@ -1,7 +1,7 @@
 +++
 title = "Surviving the Startup"
-slug = "Surviving the Startup"
 date = 2024-08-21
+render = false
 [extra]
 tags = ["Rant"]
 +++

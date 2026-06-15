@@ -1,0 +1,20 @@
+<article class="modal-article">
+    <header class="modal-article-header">
+        <div class="modal-meta">
+            <span class="modal-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+            <span class="modal-read-time">{{ page.reading_time }} min read</span>
+        </div>
+        <h1 class="modal-title">{{ page.title }}</h1>
+        {% if page.extra.tags %}
+        <div class="modal-tags">
+            {% for tag in page.extra.tags %}
+            <span class="tag">#{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    <hr class="modal-divider">
+    <div class="modal-body-content">
+        {{ page.content | safe }}
+    </div>
+</article>

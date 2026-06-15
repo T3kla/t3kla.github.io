@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="portfolio-container">
+    <div class="blog-layout">
+        <div class="blog-list">
+            {% for page in section.pages %}
+            <div data-url="{{ page.permalink }}" class="blog-entry-row">
+
+                <div class="entry-meta">
+                    <span class="entry-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+                    <span class="entry-read-time">{{ page.reading_time }} min read</span>
+                </div>
+
+                <div class="isle-card entry-main">
+                    <h2 class="entry-title">{{ page.title }}</h2>
+                    {% if page.extra.tags %}
+                    <div class="entry-tags">
+                        {% for tag in page.extra.tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div id="blog-modal" class="modal-overlay hidden">
+    <div class="modal-wrapper isle-card">
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+        <div id="modal-injector"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const entries = document.querySelectorAll(".blog-entry-row");
+        const modal = document.getElementById("blog-modal");
+        const injector = document.getElementById("modal-injector");
+        const closeBtn = document.getElementById("modal-close");
+
+        entries.forEach(entry => {
+            entry.addEventListener("click", async () => {
+                const url = entry.getAttribute("data-url");
+                injector.innerHTML = '<div class="loader">Loading...</div>';
+                modal.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error();
+                    const htmlContent = await response.text();
+                    injector.innerHTML = htmlContent;
+                } catch (err) {
+                    injector.innerHTML = '<p class="error">Failed to load content.</p>';
+                }
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+
+            // Wait for the 0.2s (200ms) fade animation to finish before wiping the text
+            setTimeout(() => {
+                injector.innerHTML = "";
+            }, 200);
+        };
+
+        closeBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+        });
+    });
+</script>
+
+{% endblock content %}
