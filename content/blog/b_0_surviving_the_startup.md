@@ -1,12 +1,12 @@
 +++
-title = "Surviving the Startup"
+title = "Test"
 date = 2024-08-21
 render = false
 [extra]
-tags = ["Rant"]
+tags = ["Test"]
 +++
 
-This post is actively being worked on!
+Test!
 
 <!-- Why is that being promoted as a programmer forces you to program less and less?
 
