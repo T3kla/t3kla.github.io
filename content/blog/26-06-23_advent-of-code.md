@@ -100,3 +100,75 @@ pub fn main(_: std.process.Init) !void {
     std.debug.print("Ribbon: {d}ft\n", .{sum_ribbon});
 }
 ```
+
+## 2015 - Day 2
+
+Got to use packed unions!
+
+I usually take using allocators and std as cheating for some reason, but I was kinda lazy as to making my own thing. And the packed union just got me a free i32 hash so...
+
+
+```zig
+const std = @import("std");
+const print = std.debug.print;
+
+const puzzle = "^><^>>>...";
+
+const Coord = packed union(i32) {
+    value: i32,
+    pos: packed struct(i32) {
+        x: i16,
+        y: i16,
+    },
+};
+
+pub fn main(_: std.process.Init) !void {
+    var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
+    defer arena.deinit();
+    const sand = arena.allocator();
+
+    print("part one: {d}\n", .{try part_one(sand)});
+    print("part two: {d}\n", .{try part_two(sand)});
+}
+
+pub fn part_one(sand: std.mem.Allocator) !u32 {
+    var houses = std.AutoHashMap(i32, void).init(sand);
+    var addr: Coord = .{ .pos = .{ .x = 0, .y = 0 } };
+    try houses.put(addr.value, {});
+
+    for (puzzle) |c| {
+        switch (c) {
+            '^' => addr.pos.y += 1,
+            'v' => addr.pos.y -= 1,
+            '>' => addr.pos.x += 1,
+            '<' => addr.pos.x -= 1,
+            else => unreachable,
+        }
+        try houses.put(addr.value, {});
+    }
+
+    return houses.count();
+}
+
+pub fn part_two(sand: std.mem.Allocator) !u32 {
+    var houses = std.AutoHashMap(i32, void).init(sand);
+    var addr_snt: Coord = .{ .pos = .{ .x = 0, .y = 0 } };
+    var addr_bot: Coord = .{ .pos = .{ .x = 0, .y = 0 } };
+    try houses.put(addr_snt.value, {});
+
+    for (puzzle, 0..) |c, i| {
+        var coord: *Coord = if (i % 2 == 0) &addr_snt else &addr_bot;
+
+        switch (c) {
+            '^' => coord.pos.y += 1,
+            'v' => coord.pos.y -= 1,
+            '>' => coord.pos.x += 1,
+            '<' => coord.pos.x -= 1,
+            else => unreachable,
+        }
+        try houses.put(coord.value, {});
+    }
+
+    return houses.count();
+}
+```
