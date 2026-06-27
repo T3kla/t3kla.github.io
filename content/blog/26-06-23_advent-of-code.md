@@ -101,7 +101,7 @@ pub fn main(_: std.process.Init) !void {
 }
 ```
 
-## 2015 - Day 2
+## 2015 - Day 3
 
 Got to use packed unions!
 
@@ -170,5 +170,41 @@ pub fn part_two(sand: std.mem.Allocator) !u32 {
     }
 
     return houses.count();
+}
+```
+
+## 2015 - Day 4
+
+Just the answer to the first part since the second is trivial.
+
+
+```zig
+const std = @import("std");
+const print = std.debug.print;
+
+const puzzle = "ckczppom";
+const zeros = "00000";
+
+pub fn main(_: std.process.Init) !void {
+    var in: [32]u8 = undefined;
+    var out: [32]u8 = undefined;
+
+    var n: u32 = 0;
+
+    while (!std.mem.eql(u8, out[0..5], zeros[0..5])) : (n += 1) {
+        const slice = try std.fmt.bufPrint(&in, "{s}{d}", .{ puzzle, n });
+        try hash(slice, &out);
+    }
+
+    print("{s}\n", .{in});
+    print("{s}\n", .{out});
+}
+
+fn hash(in: []u8, out: *[32]u8) !void {
+    var hasher = std.crypto.hash.Md5.init(.{});
+    hasher.update(in);
+    var final: [16]u8 = undefined;
+    hasher.final(&final);
+    _ = try std.fmt.bufPrint(out, "{x}", .{final});
 }
 ```
