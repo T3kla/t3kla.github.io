@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>T3kla&#x27;s Portfolio and Blog</title>
+  <link rel="stylesheet" href="https://t3kla.github.io/style.css?h=48b952230ff836ccfde0" />
+  <script src="https://t3kla.github.io/script.js?h=e6c6b4c5180d1fca5b2b"></script>
+</head>
+
+<body>
+  
+<div class="portfolio-container">
+    <div class="blog-layout">
+        <div class="blog-list">
+            
+            <div data-url="https:&#x2F;&#x2F;t3kla.github.io&#x2F;blog&#x2F;26-06-23-advent-of-code&#x2F;" class="blog-entry-row">
+
+                <div class="entry-meta">
+                    <span class="entry-date">Jun 23, 2026</span>
+                    <span class="entry-read-time">2 min read</span>
+                </div>
+
+                <div class="isle-card entry-main">
+                    <h2 class="entry-title">Advent of Zig - 2015</h2>
+                    
+                    <div class="entry-tags">
+                        
+                        <span class="tag">WIP</span>
+                        
+                        <span class="tag">Test</span>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="blog-modal" class="modal-overlay hidden">
+    <div class="modal-wrapper isle-card">
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+        <div id="modal-injector"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const entries = document.querySelectorAll(".blog-entry-row");
+        const modal = document.getElementById("blog-modal");
+        const injector = document.getElementById("modal-injector");
+        const closeBtn = document.getElementById("modal-close");
+
+        entries.forEach(entry => {
+            entry.addEventListener("click", async () => {
+                const url = entry.getAttribute("data-url");
+                injector.innerHTML = '<div class="loader">Loading...</div>';
+                modal.classList.remove("hidden");
+                document.body.style.overflow = "hidden";
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error();
+                    const htmlContent = await response.text();
+                    injector.innerHTML = htmlContent;
+                } catch (err) {
+                    injector.innerHTML = '<p class="error">Failed to load content.</p>';
+                }
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+
+            // Wait for the 0.2s (200ms) fade animation to finish before wiping the text
+            setTimeout(() => {
+                injector.innerHTML = "";
+            }, 200);
+        };
+
+        closeBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
