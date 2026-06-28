@@ -208,3 +208,92 @@ fn hash(in: []u8, out: *[32]u8) !void {
     _ = try std.fmt.bufPrint(out, "{x}", .{final});
 }
 ```
+
+## 2015 - Day 5
+
+
+```zig
+const std = @import("std");
+const print = std.debug.print;
+const eql = std.mem.eql;
+
+const puzzle = "uxcplgxnkwbdwhrp...";
+
+pub fn main(_: std.process.Init) !void {
+    var it = std.mem.tokenizeAny(u8, puzzle, ",");
+
+    var count: i32 = 0;
+    var total: i32 = 0;
+
+    while (it.next()) |str| : (total += 1) {
+        if (!isNaughty_partOne(str))
+            count += 1;
+    }
+
+    print("\nPart one {d}/{d}\n", .{ count, total });
+
+    count = 0;
+    total = 0;
+    it.reset();
+
+    while (it.next()) |str| : (total += 1) {
+        if (!isNaughty_partTwo(str))
+            count += 1;
+    }
+
+    print("Part two {d}/{d}\n", .{ count, total });
+}
+
+fn isNaughty_partOne(str: []const u8) bool {
+    var cond_vowels: u8 = 0;
+    var cond_repeat = false;
+
+    return for (str, 0..) |c, i| {
+        if (c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u')
+            cond_vowels += 1;
+
+        if (i == str.len - 1)
+            continue;
+
+        const pair: []const u8 = str[i .. i + 2];
+
+        if (eql(u8, pair, "ab") or eql(u8, pair, "cd") or eql(u8, pair, "pq") or eql(u8, pair, "xy"))
+            return true;
+
+        if (pair[0] == pair[1])
+            cond_repeat = true;
+    } else cond_vowels < 3 or !cond_repeat;
+}
+
+fn isNaughty_partTwo(str: []const u8) bool {
+    var size: usize = 2;
+    var bound = str.len - 2 + 1;
+
+    const cond_pairs = blk: {
+        for (0..bound) |i| for (0..bound) |j| {
+            const w1 = str[i .. i + size];
+            const w2 = str[j .. j + size];
+
+            if (j != i -% 1 and j != i and j != i + 1)
+                if (eql(u8, w1, w2))
+                    break :blk true;
+        };
+        break :blk false;
+    };
+
+    size = 3;
+    bound = str.len - 3 + 1;
+
+    const cond_skip = for (0..bound) |i| {
+        const w1 = str[i .. i + size];
+
+        if (w1[0] == w1[2])
+            break true;
+    } else false;
+
+    if (cond_pairs and cond_skip)
+        return false;
+
+    return true;
+}
+```
